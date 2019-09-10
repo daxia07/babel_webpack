@@ -1,0 +1,24 @@
+{
+  "name": "babel_webpack",
+  "version": "1.0.0",
+  "description": "environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daxia07/babel_webpack.git"
+  },
+  "keywords": [],
+  "author": "limingxia <limingxia07@gmail.com> (http://www.prawn-dumpling.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daxia07/babel_webpack/issues"
+  },
+  "homepage": "https://github.com/daxia07/babel_webpack#readme",
+  "devDependencies": {
+    "webpack": "^4.39.3"
+  },
+  "dependencies": {}
+}
