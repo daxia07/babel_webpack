@@ -8,7 +8,6 @@ export default class Search {
   }
   async getResult() {
     try {
-      console.log(proxy);
       const res = await axios(`${proxy+process.env.API_URL}?key=${process.env.API_KEY}&q=${this.query}`);
       this.result = res.data.recipes;
       console.log(this.result);
