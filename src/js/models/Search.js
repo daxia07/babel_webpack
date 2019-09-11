@@ -1,19 +1,15 @@
 import axios from 'axios';
-const DEBUG = true;
+// require('dotenv').config();
+let proxy = process.env.NODE_ENV === 'development' ? process.env.API_PROXY : '';
 
 export default class Search {
   constructor(query) {
     this.query = query;
   }
   async getResult() {
-    let url = 'http://food2fork.com/api/search';
-    const key = 'f6644f74e7cb9969a99998d7ae435f84';
-    if (DEBUG) {
-      let proxy = 'https://cors-anywhere.herokuapp.com/';
-      url = proxy + url;
-    }
     try {
-      const res = await axios(`${url}?key=${key}&q=${this.query}`);
+      console.log(proxy);
+      const res = await axios(`${proxy+process.env.API_URL}?key=${process.env.API_KEY}&q=${this.query}`);
       this.result = res.data.recipes;
       console.log(this.result);
     } catch (error) {
