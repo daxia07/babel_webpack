@@ -1,3 +1,3 @@
 console.log('test');
-const num = 9;
-module.exports = num
+const d = 9;
+module.exports = d
