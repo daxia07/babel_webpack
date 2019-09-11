@@ -11,7 +11,11 @@
       "request": "launch",
       "url": "http://localhost:5500/src/",
       // "file": "${workspaceFolder}/src/index.html",
-      "webRoot": "${workspaceFolder}/src/"
+      "webRoot": "${workspaceFolder}/src/",
+      "skipFiles": [
+        "${workspaceRoot}/node_modules/**/*.js",
+        "<node_internals>/**/*.js"
+      ],
     },
     {
       "name": "Launch ES6 Debugger",
@@ -35,9 +39,36 @@
       "sourceMaps": false,
       "outFiles": [],
       "skipFiles": [
-        "${workspaceFolder}/node_modules/**/*.js",
-        "${workspaceFolder}/lib/**/*.js"
+        "${workspaceRoot}/node_modules/**/*.js",
+        "<node_internals>/**/*.js"
       ],
+    },
+    {
+      "name": "Launch ES6 Debugger source map",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceRoot}/src/js/index.js",
+      "stopOnEntry": false,
+      "args": [],
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": null,
+      "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/babel-node",
+      "runtimeArgs": [
+        "--nolazy",
+        "--harmony",
+        "--no-deprecation"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "internalConsole",
+      "sourceMaps": true,
+      "outFiles": ["${workspaceRoot}/dist/**/*.js"],
+      "skipFiles": [
+        "${workspaceRoot}/node_modules/**/*.js",
+        "<node_internals>/**/*.js"
+      ],
+      "smartStep": true
     },
     {
       "name": "Launch Program Current",
