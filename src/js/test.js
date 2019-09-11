@@ -1,3 +1,4 @@
-console.log('test');
-const d = 9;
-module.exports = d
+const num = () => {
+  console.log('done')
+};
+export default num;

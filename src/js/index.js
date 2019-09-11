@@ -1,27 +1,11 @@
-// const num = require('./test');
-import _ from 'lodash';
+// import Search from './models/Search';
 
-let words = ['sky', 'wood', 'forest', 'falcon',
-  'pear', 'ocean', 'universe'
-];
+// const search = new Search('pizza');
 
-let fel = _.first(words);
-let lel = _.last(words);
+// search.getResult();
 
-console.log(`First element: ${fel}`);
-console.log(`Last element: ${lel}`);
+// console.log('Done');
 
-class Expense {
-  constructor(des, value) {
-    this.des = des;
-    this.value = value;
-  }
-  getValue() {
-    return this.value;
-  }
-}
+console.log('Done');
 
-exp = new Expense('jd', 200);
-console.log(exp);
-console.log(exp.getValue());
-console.log('test');
+console.log('try it ');
