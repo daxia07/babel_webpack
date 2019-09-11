@@ -1,3 +1,3 @@
 const num = require('./test');
-
-console.log(`imported ${num} from test`);
+const x = 20
+console.log(`imported ${num} from test, var is ${x}`);
